@@ -1,0 +1,44 @@
+CSCE 3530 - Introduction to Computer Networks
+Programming Assignment #1
+Programmer: Conor Vanek
+Due Date: 6/16/2023
+
+Objective (Taken from instructions):
+Create a count server that can do the following: converts single digit integers of a given
+sentence to number words, counts the number of uppercase and lowercase alphabets,
+and finally counts the number of special characters in an input sentence
+
+How to compile & execute:
+1: Unzip the contents of the Zip file into their own folder.
+2: Navigate to the folder and run the command "make". This will compile server.c and client.c into their own executables.
+3: To start the server, enter the command "./ctserver <port_number>". Replace <port_number> with a valid port number of your choice (example, 1234, 8080, etc.)
+4: The server should display a message that it is now listening on the port you chose.
+5: To start the client and connect to the server, enter the command "./client <port_number>". Use the same port number that the server is listening on.
+6: The client window should now be prompting for input. Enter an input up to 255 characters.
+7: The server will respond back as per the objective (above)
+
+
+How to clean executables:
+-Navigate to the folder containing source code & executables and enter the command "make clean"
+
+Testing:
+-Two test cases can be taken directly from the instructions: 
+While connected to the server, in the client program type the input: 
+
+Average US inflation will be 6% this year!
+
+The response should be:
+
+Output: Average US inflation will be six% this year!
+Uppercase alphabets: 3
+Lowercase alphabets: 29
+Special Characters: 1
+
+Input: The cost for 3 apples is $4!
+
+The response should be:
+
+Output: The cost for three apples is $four!
+Uppercase alphabets: 1
+Lowercase alphabets: 17
+Special Characters: 1
